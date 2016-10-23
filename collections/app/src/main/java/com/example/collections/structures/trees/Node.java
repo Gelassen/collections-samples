@@ -17,12 +17,12 @@ public class Node<T> {
         children = new ArrayList<>();
     }
 
-    public Node<T> findByValue(T value) {
-        if (this.value == value) return this;
+    public Node<T> findByValue(Node<T> node, T value) {
+        if (node.value == value) return this;
 
         Node<T> result = null;
-        for (Node<T> node : children) {
-            result = findByValue(node.value);
+        for (Node<T> child : children) {
+            result = findByValue(child, value);
             if (result != null) return this;
         }
 
