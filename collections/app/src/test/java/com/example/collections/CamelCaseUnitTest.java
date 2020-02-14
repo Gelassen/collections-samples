@@ -19,4 +19,3 @@ public class CamelCaseUnitTest {
         assertEquals(5, result);
     }
 }
-7
